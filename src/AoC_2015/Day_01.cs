@@ -6,11 +6,15 @@ namespace AoC_2015
 {
     public class Day_01 : BaseDay
     {
+        private readonly string _input;
+
+        public Day_01()
+        {
+            _input = ParseInput();
+        }
         public override string Solve_1()
         {
-            var input = ParseInput();
-
-            var solution = input.Aggregate(
+            var solution = _input.Aggregate(
                 0,
                 (int total, char item) => total + ChangeFloorLevel(item));
 
@@ -19,12 +23,10 @@ namespace AoC_2015
 
         public override string Solve_2()
         {
-            var input = ParseInput();
-
             var floor = 0;
-            for (int i = 0; i < input.Length; ++i)
+            for (int i = 0; i < _input.Length; ++i)
             {
-                floor += ChangeFloorLevel(input[i]);
+                floor += ChangeFloorLevel(_input[i]);
 
                 if (floor < 0)
                 {

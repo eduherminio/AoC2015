@@ -7,13 +7,18 @@ namespace AoC_2015
 {
     public class Day_02 : BaseDay
     {
+        private readonly IEnumerable<(int l, int w, int h)> _input;
+
+        public Day_02()
+        {
+            _input = ParseInput();
+        }
+
         public override string Solve_1()
         {
-            var input = ParseInput();
-
             var solution = 0;
 
-            foreach (var p in input)
+            foreach (var p in _input)
             {
                 solution += CalculatePaper(p);
             }
@@ -23,11 +28,9 @@ namespace AoC_2015
 
         public override string Solve_2()
         {
-            var input = ParseInput();
-
             var solution = 0;
 
-            foreach (var p in input)
+            foreach (var p in _input)
             {
                 solution += CalculateRibbon(p);
             }
