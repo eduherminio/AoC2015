@@ -65,6 +65,7 @@ namespace AoC_2015
         /// </summary>
         /// <param name="present"></param>
         /// <returns></returns>
+#pragma warning disable S1144, IDE0051, RCS1213 // Unused private types or members should be removed
         private static int CalculatePaperAndRibbon((int l, int w, int h) present)
         {
             var list = new List<(int a, int b)>
@@ -83,6 +84,7 @@ namespace AoC_2015
                 + (2 * list[minPair].a) + (2 * list[minPair].b)     // Min side perimeter
                 + (present.l * present.w * present.h);              // Total volume
         }
+#pragma warning restore S1144, IDE0051, RCS1213 // Unused private types or members should be removed
 
         private IEnumerable<(int l, int w, int h)> ParseInput()
         {

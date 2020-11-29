@@ -2,17 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
     <Nullable>Enable</Nullable>
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <NoWarn>1701;1702;S101</NoWarn>
+  <PropertyGroup>
+    <NoWarn>S101</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AoCHelper" Version="0.8.0" />
+    <PackageReference Include="AoCHelper" Version="0.8.2" />
     <PackageReference Include="FileParser" Version="2.0.0" />
+    <PackageReference Include="SheepTools" Version="0.6.0" />
   </ItemGroup>
 
   <ItemGroup>
